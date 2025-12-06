@@ -37,8 +37,6 @@ pip install -r requirements.txt
 - Ensure any data path variables point to `Dataset/chest_xray/`.
 - Run all cells to train; best weights are saved to [checkpoints/](checkpoints/).
 
-Tip: If a GPU is available, training will be much faster. The notebooks typically select CUDA with `torch.cuda.is_available()`.
-
 ## What each notebook does
 
 - DenseNet-121: Trains a compact CNN that reuses features via dense connectivity.
