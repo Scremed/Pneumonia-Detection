@@ -14,7 +14,7 @@ Dataset: https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/
 - Notebooks
   - [DenseNet-121_model.ipynb](DenseNet-121_model.ipynb)
   - [EfficientNet-B3_model.ipynb](EfficientNet-B3_model.ipynb)
-  - [Swin-Transformer_model.ipynb](Swin-Transformer_model.ipynb)
+  - [Swin-Transformer_model.ipynb](Swin_Transformer_model.ipynb)
 
 ## Quick start
 
@@ -37,16 +37,14 @@ pip install -r requirements.txt
 - Ensure any data path variables point to `Dataset/chest_xray/`.
 - Run all cells to train; best weights are saved to [checkpoints/](checkpoints/).
 
-Tip: If a GPU is available, training will be much faster. The notebooks typically select CUDA with `torch.cuda.is_available()`.
-
 ## What each notebook does
 
 - DenseNet-121: Trains a compact CNN that reuses features via dense connectivity.
-  - Input size typically 224×224, ImageNet normalization, standard augmentations.
+- Input size typically 224×224, ImageNet normalization, standard augmentations.
 - EfficientNet-B3: Scaled CNN with compound depth/width/resolution scaling.
-  - Input size typically 300×300.
+- Input size typically 300×300.
 - Swin Transformer Tiny: Hierarchical transformer with shifted windows for efficiency.
-  - Input size typically 224×224.
+- Input size typically 224×224.
 
 All notebooks include training, validation, test evaluation, and checkpointing to [checkpoints/](checkpoints/).
 
