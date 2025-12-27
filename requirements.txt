@@ -8,3 +8,5 @@ timm
 tqdm
 PIL
 numpy
+Pillow
+streamlit
