@@ -10,6 +10,7 @@ Dataset: https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/
 ## Repository structure
 
 - .gitignore (ignoring large files, e.g. saved models and datasets)
+- app.py (streamlit)
 - README.md
 - Notebooks
   - [DenseNet-121_model.ipynb](DenseNet-121_model.ipynb)
