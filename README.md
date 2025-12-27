@@ -41,21 +41,18 @@ pip install -r requirements.txt
 ## What each notebook does
 
 - DenseNet-121: Trains a compact CNN that reuses features via dense connectivity.
-- Input size typically 224×224, ImageNet normalization, standard augmentations.
 - EfficientNet-B3: Scaled CNN with compound depth/width/resolution scaling.
-- Input size typically 300×300.
 - Swin Transformer Tiny: Hierarchical transformer with shifted windows for efficiency.
-- Input size typically 224×224.
 
 All notebooks include training, validation, test evaluation, and checkpointing to [checkpoints/](checkpoints/).
 
 ## Evaluation
 
 Common metrics:
-- Accuracy: $ \text{Acc}=\frac{TP+TN}{TP+FP+TN+FN} $
-- Precision: $ \text{Prec}=\frac{TP}{TP+FP} $
-- Recall (Sensitivity): $ \text{Rec}=\frac{TP}{TP+FN} $
-- F1: $ \text{F1}=2\cdot\frac{\text{Prec}\cdot\text{Rec}}{\text{Prec}+\text{Rec}} $
+- Accuracy
+- Precision
+- Recall (Sensitivity)
+- F1-score
 
 Use the “Evaluation” section in each notebook to:
 - Compute metrics on [Dataset/chest_xray/test](Dataset/chest_xray/test)
@@ -63,16 +60,13 @@ Use the “Evaluation” section in each notebook to:
 
 ## Streamlit App
 
-An interactive UI to classify chest X-rays using the trained EfficientNet-B3 checkpoint.
+An interactive UI to classify chest X-rays using the trained models checkpoint.
 
 ### Run the app
 
 ```bash
-# Install dependencies (after activating your virtual env)
-pip install -r requirements.txt
-
 # Start the Streamlit app
 streamlit run app.py
 ```
 
-Then open the local URL shown in the terminal, and upload a chest X-ray (JPG/PNG). The app displays the predicted class and confidence with a progress bar.
+Then open the local URL shown in the terminal, and upload a chest X-ray (JPG/PNG). The app displays the predicted class and confidence.
