@@ -59,3 +59,19 @@ Common metrics:
 Use the “Evaluation” section in each notebook to:
 - Compute metrics on [Dataset/chest_xray/test](Dataset/chest_xray/test)
 - Plot confusion matrix and ROC curves
+
+## Streamlit App
+
+An interactive UI to classify chest X-rays using the trained EfficientNet-B3 checkpoint.
+
+### Run the app
+
+```bash
+# Install dependencies (after activating your virtual env)
+pip install -r requirements.txt
+
+# Start the Streamlit app
+streamlit run app.py
+```
+
+Then open the local URL shown in the terminal, and upload a chest X-ray (JPG/PNG). The app displays the predicted class and confidence with a progress bar.
